@@ -1,6 +1,7 @@
 // making changes related to fix JIRA-123
 pipeline {
       agent any
+	options { buildDiscarder(logRotator(numToKeepStr: '2')) }
       stages {
          stage ('Build') {
           steps {
