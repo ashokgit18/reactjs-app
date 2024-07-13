@@ -5,7 +5,7 @@ pipeline {
          stage ('Build') {
           steps {
              sh '''cd $WORKSPACE
-                   sudo docker build -t containerstore123:v${BUILD_NUMBER} .'''
+                   docker build -t containerstore123:v${BUILD_NUMBER} .'''
              }
            }
            stage('push ECR'){
